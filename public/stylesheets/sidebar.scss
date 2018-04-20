@@ -1,0 +1,48 @@
+$sidebar-main-background: #E9E8F3;
+$sidebar-inside-background: #706F7A;
+$sidebar-inside-background-hover: #65646F;
+$sidebar-inside-border-color: #7E7D88;
+
+.col-sm-3.col-md-2.sidebar {
+  background-color: $sidebar-main-background;
+  padding: 3px;
+  width: 10.667%;
+
+  .main-section {
+    background-color: $sidebar-inside-background;
+    border-radius: 4px;
+
+    li {
+      display: block;
+      box-sizing: content-box;
+
+      a {
+        color: #fff;
+        font-weight: 600;
+        padding: 4px;
+      }
+
+      a:hover, a:focus {
+        background: transparent;
+        text-decoration: none;
+      }
+
+      ul {
+        padding: 10px;
+
+        li {
+          padding: 5px 0px;
+          border-bottom: 1px $sidebar-inside-border-color solid;
+          a {
+            color: #d4d4d4;
+            font-weight: 600;
+          }
+        }
+
+        li:hover, li:focus, li:active {
+          background: $sidebar-inside-background-hover;
+        }
+      }
+    }
+  }
+}

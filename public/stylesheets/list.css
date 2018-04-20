@@ -1,0 +1,36 @@
+#registerNew {
+  background: #427232;
+  display: inline-block;
+  box-sizing: content-box;
+  padding: 8px;
+  border-radius: 2px;
+  color: #fff; }
+
+#registerNew:hover, #registerNew:focus {
+  background: #508040;
+  text-decoration: none; }
+
+.dataTables_wrapper .dataTables_filter {
+  display: flex;
+  align-items: stretch; }
+  .dataTables_wrapper .dataTables_filter label {
+    margin: 0px 0px 0px 12px; }
+
+.display.dataTable.no-footer thead {
+  background: #8DACAC; }
+.display.dataTable.no-footer td.actions-column {
+  display: flex; }
+  .display.dataTable.no-footer td.actions-column a {
+    display: inline-block;
+    box-sizing: content-box;
+    padding: 5px;
+    font-weight: 600; }
+  .display.dataTable.no-footer td.actions-column a:focus, .display.dataTable.no-footer td.actions-column a:hover {
+    text-decoration: none; }
+  .display.dataTable.no-footer td.actions-column a.delete {
+    color: #F33084; }
+  .display.dataTable.no-footer td.actions-column a.delete:hover, .display.dataTable.no-footer td.actions-column a.delete:focus {
+    text-decoration: none;
+    color: #A40035; }
+
+/*# sourceMappingURL=list.css.map */

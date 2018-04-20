@@ -1,0 +1,68 @@
+body {
+  margin: 0px;
+  width: 100%;
+  padding: 0px;
+  background-image: url("../images/static1.squarespace.com.png");
+  background-size: 100%;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+}
+
+label {
+    margin: 0px;
+}
+
+.login-form {
+  background-color: rgba(51, 178, 140,0.1);
+  padding: 2px;
+  display: flex;
+  flex-basis: 24%;
+  flex-direction: column;
+  border: 2px #93B375 solid;
+  border-radius: 2px;
+  box-shadow: 2px 2px 5px #4C424C;
+
+  span {
+    color: white;
+    text-align: center;
+    font-size: 1.5em;
+    background: rgba(41,91,11,0.33);
+  }
+
+  div {
+    display: flex;
+    padding: 4px 10px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .error-userName, .error-userPassword {
+    padding: 0px 10px;
+    justify-content: right;
+    label {
+      color: red;
+    }
+  }
+
+  .submit-error {
+      color: red;
+      text-align: right;
+  }
+
+  .submit-div {
+    display: flex;
+    flex-direction: row-reverse;
+
+    .submit {
+      padding: 5px 10px;
+      border-radius: 7px;
+      border: none;
+      background: rgba(240, 254, 208,0.9);
+      width: 100%;
+      font-weight: bold;
+    }
+  }
+}

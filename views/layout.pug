@@ -1,0 +1,47 @@
+doctype html
+html
+  head  
+    title= title
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous")
+    link(rel="stylesheet", href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css")
+    link(rel="stylesheet", href="/stylesheets/style.css")
+    link(rel="stylesheet", href="/stylesheets/top-navbar.css")
+    link(rel="stylesheet", href="/stylesheets/sidebar.css")
+    link(rel="stylesheet", href="/stylesheets/list.css")
+  body
+    .navbar.navbar-inverse.navbar-fixed-top(role="navigation")
+      .container-fluid
+        .navbar-header
+          button.navbar-toggle(type="button", data-toggle="collapse", data-target=".navbar-collapse")
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href="#") Project name
+        .navbar-collapse.collapse
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(href="/dashboard/users" id="userActions") Usuarios
+            li
+              a(href="/dashboard") Tablero Principal
+            li(class="dropdown")
+              a(id="userOptions" href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true")
+              ul(class="dropdown-menu" aria-labelledby="userOptions")
+                li
+                  a(href="#") Configuración
+                li
+                  a(href="#") Ayuda
+                li
+                  a(href="/logout") Salir
+          form.navbar-form.navbar-right
+            input.form-control(type="text", placeholder="Search...")
+              
+    block head
+      script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+      script(src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js")
+      script(src="http://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js")
+      script(src="https://cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js")
+      script(src="/javascripts/main.js")
+      script(src="/javascripts/top-navbar.js")
+      
+    block content

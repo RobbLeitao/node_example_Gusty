@@ -1,0 +1,29 @@
+doctype html
+html
+  head
+  title login
+  link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous")
+  link(rel="stylesheet", href="/stylesheets/style.css")
+  link(rel="stylesheet", href="/stylesheets/login.css")
+  script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+  script(src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js")
+body
+  form(id="loginForm")
+    div(class="login-form")
+      span INGRESAR
+      div
+        label(for="userName") usuario
+        input(id="userName" name="userName")
+      div(class="error-userName")
+        label(for="userName" class="error")
+      div    
+        label(for="password") contraseña
+        input(id="password" name="password" type="password")
+      div(class="error-userPassword")
+        label(for="password" class="error")
+      div
+        label(class="submit-error")
+      div(class="submit-div")
+        input(type="submit" value="Ingresar" class="submit")
+    script(src="/javascripts/main.js")
+    script(src="/javascripts/login.js")

@@ -1,0 +1,36 @@
+extends layout
+  
+block content
+  link(rel="stylesheet", href="/stylesheets/register-form.css")
+  
+  if exists
+    input(id="idHidden" type="hidden" value=id)
+    input(id="fullNameHidden" type="hidden" value=fullName)
+    input(id="addressHidden" type="hidden" value=address)
+    input(id="telephoneHidden" type="hidden" value=telephone)
+  form(id="registerHealthInsuranceForm" method="POST")
+    div(class="register-form")
+      span REGISTRAR
+      div
+        label(for="fullName") nombre completo
+        input(id="fullName" name="fullName")
+      div(class="error-field")
+        label(for="fullName" class="error")
+      div    
+        label(for="address") dirección
+        input(id="address" name="address")
+      div(class="error-field")
+        label(for="address" class="error")
+      div    
+        label(for="telephone") telefono
+        input(id="telephone" name="telephone" type="text")
+      div(class="error-field")
+        label(for="telephone" class="error")
+      div
+        label(class="submit-error")
+      div(class="submit-div")
+        input(type="button" value="Volver" class="button back")
+        input(type="submit" value="Registrar" class="button submit")
+          
+    script(src="/javascripts/common-rules-validations.js")          
+    script(src="/javascripts/register-health-insurance.js")

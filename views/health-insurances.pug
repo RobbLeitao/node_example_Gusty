@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  div
+    h1 Obras sociales
+    div
+      a(id="registerNew" href="/dashboard/health-insurances/register") Nuevo 
+      div
+        table(id="healthInsurancesGrid"  class="display" cellspacing="0" width="100%")
+          thead
+            tr
+              th Nombre
+              th Dirección
+              th Telefono
+              th Acciones
+          tbody
+            each item in healthInsurances  
+              tr
+                td= item.fullName
+                td= item.address
+                td= item.telephone
+                td.actions-column 
+                  a(href="/dashboard/health-insurances/edit/" + item.id) editar
+                  a(href="#").delete eliminar
+                    input(type="hidden" value=item.id)
+
+  script(src="/javascripts/health-insurances.js")

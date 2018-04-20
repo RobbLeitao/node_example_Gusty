@@ -1,0 +1,58 @@
+$register-new-color: #427232;
+$register-new-color-hover: #508040;
+$table-head-background: #8DACAC;
+$table-actions-delete-color: #F33084;
+$table-actions-delete-color-hover: #A40035;
+
+#registerNew {
+  background: $register-new-color;
+  display: inline-block;
+  box-sizing: content-box;
+  padding: 8px;
+  border-radius: 2px;
+  color: #fff;
+}
+
+#registerNew:hover, #registerNew:focus  {
+  background: $register-new-color-hover;
+  text-decoration: none;
+}
+
+.dataTables_wrapper .dataTables_filter {
+  display: flex;
+  align-items: stretch;
+
+  label {
+    margin: 0px 0px 0px 12px;
+  }
+}
+
+.display.dataTable.no-footer {
+  thead {
+    background: $table-head-background;
+  }
+
+  td.actions-column {
+    display: flex;
+
+    a {
+      display: inline-block;
+      box-sizing: content-box;
+      padding: 5px;
+      font-weight: 600;
+    }
+
+    a:focus, a:hover {
+      text-decoration: none;
+    }
+
+    a.delete {
+      color: $table-actions-delete-color;
+    }
+
+    a.delete:hover, a.delete:focus {
+      text-decoration: none;
+      color: $table-actions-delete-color-hover;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+extends layout
+
+block content
+  div
+    h1 Obras sociales
+    div
+      a(id="registerNew" href="/dashboard/appointments/register") Nuevo 
+      div
+        table(id="appointmentsGrid"  class="display" cellspacing="0" width="100%")
+          thead
+            tr
+              th Paciente
+              th Legajo
+              th Hora
+              th Fecha desde
+              th Fecha hasta
+          tbody
+            each item in appointments  
+              tr
+                td= item.patient
+                td= item.patientFile
+                td= item.appointmentTime
+                td= item.startDate
+                td= item.endDate
+                td.actions-column 
+                  a(href="/dashboard/appointments/edit/" + item.id) editar
+                  a(href="#").delete eliminar
+                    input(type="hidden" value=item.id)
+
+  script(src="/javascripts/appointments.js")

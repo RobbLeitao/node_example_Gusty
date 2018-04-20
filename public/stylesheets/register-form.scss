@@ -1,0 +1,66 @@
+form {
+  display: flex;
+  justify-content: center;
+}
+
+.register-form {
+  background-color: rgba(51, 178, 140,0.1);
+  padding: 2px;
+  display: flex;
+  flex-basis: 50%;
+  flex-direction: column;
+  border: 2px #93B375 solid;
+  border-radius: 2px;
+  box-shadow: 2px 2px 5px #4C424C;
+
+  span {
+    color: white;
+    text-align: center;
+    font-size: 1.5em;
+    background: rgba(41,91,11,0.33);
+  }
+
+  div {
+    display: flex;
+    padding: 4px 10px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .error-field {
+    padding: 0px 10px;
+    justify-content: right;
+    label {
+      color: red;
+    }
+  }
+
+  .submit-error {
+      color: red;
+      text-align: right;
+  }
+
+  .submit-div {
+    display: flex;
+
+    .button {
+      padding: 5px 10px;
+      border-radius: 7px;
+      border: none;
+      width: 100%;
+      font-weight: bold;
+    }
+
+    .submit {
+      background: rgba(240, 254, 208,0.9);
+    }
+
+    .back {
+      background: rgba(213, 169, 211, 0.9)
+    }
+  }
+
+  input, label, select {
+    flex-basis: 50%;
+  }
+}

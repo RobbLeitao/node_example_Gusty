@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  div
+    h1 Usuarios
+    div
+      a(id="registerNew" href="/dashboard/users/register") Nuevo 
+      div
+        table(id="usersGrid"  class="display" cellspacing="0" width="100%")
+          thead
+            tr
+              th Nombre de usurario
+              th Nombre completo
+              th Email
+              th Rol
+              th Acciones
+          tbody
+            each item in users  
+              tr
+                td= item.userName
+                td= item.fullName
+                td= item.userEmail
+                td= item.userRole
+                td.actions-column 
+                  a(href="/dashboard/users/edit/" + item.id) editar
+                  a(href="#").delete eliminar
+                    input(type="hidden" value=item.id)   
+
+  script(src="/javascripts/users.js")

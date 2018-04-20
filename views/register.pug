@@ -1,0 +1,56 @@
+extends layout
+  
+block content
+  link(rel="stylesheet", href="/stylesheets/register-form.css")
+  
+  if exists
+    input(id="idHidden" type="hidden" value=id)
+    input(id="fullNameHidden" type="hidden" value=fullName)
+    input(id="userNameHidden" type="hidden" value=userName)
+    input(id="emailHidden" type="hidden" value=userEmail)
+    input(id="roleHidden" type="hidden" value=userRole)
+        
+  form(id="registerUserForm")
+    div(class="register-form")
+      span REGISTRAR
+      div
+        label(for="userName") usuario
+        input(id="userName" name="userName")
+      div(class="error-field")
+        label(for="userName" class="error")
+      div
+        label(for="password") contraseña
+        input(id="password" name="password" type="password")
+      div(class="error-field")
+        label(for="password" class="error")
+      div
+        label(for="passwordConfirm") confirmar contraseña
+        input(id="passwordConfirm" name="passwordConfirm" type="password")
+      div(class="error-field")
+        label(for="passwordConfirm" class="error")
+      div
+        label(for="role") rol
+        select(id="role" name="role" class="form-control")
+          option(value="") seleccionar rol
+          each item in roles
+            option(value=item.id)= item.description
+      div(class="error-field")
+        label(for="role" class="error")
+      div
+        label(for="fullName") nombre completo
+        input(id="fullName" name="fullName" type="text")
+      div(class="error-field")
+        label(for="fullName" class="error")
+      div
+        label(type="email" for="email") email
+        input(id="email" name="email" type="text")
+      div(class="error-field")
+        label(for="email" class="error")
+      div
+        label(class="submit-error")
+      div(class="submit-div")
+        input(type="button" value="Volver" class="button back")
+        input(type="submit" value="Registrar" class="button submit")
+          
+  script(src="/javascripts/common-rules-validations.js")
+  script(src="/javascripts/register-user.js")

@@ -1,0 +1,30 @@
+extends layout
+
+block content
+  .container-fluid
+    .row
+      .col-sm-3.col-md-2.sidebar
+        ul.nav.nav-sidebar.main-section
+          li
+            a(href="#") Principal
+            ul
+              li
+                a(href="/dashboard/patients") Pacientes
+              li
+                a(href="/dashboard/appointments") Turnos
+              li
+                a(href="#") Resumen
+          li
+            a(href="#") Varios
+            ul
+              li
+                a(href="/dashboard/health-insurances") Obras sociales
+              li
+                a(href="#") Turnos
+              li
+                a(href="#") Resumen
+  // Bootstrap core JavaScript
+  // ==================================================
+  // Placed at the end of the document so the pages load faster
+  script(src=`${pathToAssets}/dist/js/bootstrap.min.js`)
+  script(src=`${pathToAssets}/docs/assets/js/vendor/holder.js`)

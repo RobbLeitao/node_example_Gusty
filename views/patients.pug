@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  div
+    h1 Pacientes
+    div
+      a(id="registerNew" href="/dashboard/patients/register") Nuevo 
+      div
+        table(id="patientsGrid"  class="display" cellspacing="0" width="100%")
+          thead
+            tr
+              th Nombre
+              th Dirección
+              th Telefono
+              th legajo
+              th Acciones
+          tbody
+            each item in patients  
+              tr
+                td= item.fullName
+                td= item.address
+                td= item.telephone
+                td= item.patientFile
+                td.actions-column 
+                  a(href="/dashboard/patients/edit/" + item.id) editar
+                  a(href="#").delete eliminar
+                    input(type="hidden" value=item.id)   
+
+  script(src="/javascripts/patients.js")
